@@ -54,7 +54,7 @@ nav a:hover {
   top: 10px;
   right: 10px;
   background-color: transparent;
-  padding: 10px;
+  padding: 5px;  /* Zmniejszenie paddingu */
   border-radius: 50%;
   transition: background-color 0.3s;
   display: inline-flex;
@@ -63,8 +63,8 @@ nav a:hover {
 }
 
 .instagram-button img {
-  width: 30px;  /* Dostosuj rozmiar logo */
-  height: auto;
+  width: 25px;  /* Zmniejszenie rozmiaru logo */
+  height: 25px;  /* Zmniejszenie rozmiaru logo */
   transition: transform 0.3s ease;
 }
 
