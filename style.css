@@ -54,7 +54,7 @@ nav a:hover {
   top: 10px;
   right: 10px;
   background-color: transparent;
-  padding: 10px;
+  padding: 20px; /* Zwiększamy padding, aby ikona była większa */
   border-radius: 50%;
   transition: background-color 0.3s;
   display: inline-flex;
@@ -63,7 +63,7 @@ nav a:hover {
 }
 
 .instagram-button img {
-  width: 30px;  /* Dostosuj rozmiar logo */
+  width: 90px;  /* Zwiększamy rozmiar ikony 3 razy */
   height: auto;
   transition: transform 0.3s ease;
 }
