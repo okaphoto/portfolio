@@ -84,14 +84,11 @@ main {
 
 section {
   margin-bottom: 4rem;
-}
-
-h2 {
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-  font-weight: 500;
 }
 
 .album-cover {
@@ -170,7 +167,6 @@ h2 {
 
 .album-cover img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .album-cover {
@@ -189,13 +185,3 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
-
-/* Wyśrodkowanie albumów */
-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-}
-
