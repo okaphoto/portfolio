@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moje Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Czcionka Roboto z Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -17,12 +19,18 @@
         <li><a href="#nature">Nature</a></li>
       </ul>
     </nav>
+    <!-- Instagram button -->
+    <a href="https://www.instagram.com/okaphoto.like" class="instagram-button" target="_blank">📸</a>
   </header>
 
   <main>
+    <!-- Sport -->
     <section id="sport">
       <h2>Sport</h2>
-      <div class="gallery">
+      <div class="album-cover">
+        <img src="https://i.imgur.com/9OAO9zR.jpeg" alt="Sport Cover" onclick="toggleAlbum('sport-album')" />
+      </div>
+      <div id="sport-album" class="album-images">
         <img src="https://i.imgur.com/9OAO9zR.jpeg" alt="Sport 1" />
         <img src="https://i.imgur.com/GQ6ElPE.jpeg" alt="Sport 2" />
         <img src="https://i.imgur.com/HlhHATm.jpeg" alt="Sport 3" />
@@ -39,9 +47,13 @@
       </div>
     </section>
 
+    <!-- Cars -->
     <section id="cars">
       <h2>Cars</h2>
-      <div class="gallery">
+      <div class="album-cover">
+        <img src="https://i.imgur.com/J4wfqMn.jpeg" alt="Cars Cover" onclick="toggleAlbum('cars-album')" />
+      </div>
+      <div id="cars-album" class="album-images">
         <img src="https://i.imgur.com/J4wfqMn.jpeg" alt="Cars 1" />
         <img src="https://i.imgur.com/qBRekzC.jpeg" alt="Cars 2" />
         <img src="https://i.imgur.com/whFZatK.jpeg" alt="Cars 3" />
@@ -53,9 +65,25 @@
       </div>
     </section>
 
+    <!-- Drone -->
+    <section id="drone">
+      <h2>Drone</h2>
+      <div class="album-cover">
+        <img src="https://i.imgur.com/mno3451.jpg" alt="Drone Cover" onclick="toggleAlbum('drone-album')" />
+      </div>
+      <div id="drone-album" class="album-images">
+        <img src="https://i.imgur.com/mno345.jpg" alt="Drone 1" />
+        <img src="https://i.imgur.com/pqr678.jpg" alt="Drone 2" />
+      </div>
+    </section>
+
+    <!-- Nature -->
     <section id="nature">
       <h2>Nature</h2>
-      <div class="gallery">
+      <div class="album-cover">
+        <img src="https://i.imgur.com/vMXotnB.jpeg" alt="Nature Cover" onclick="toggleAlbum('nature-album')" />
+      </div>
+      <div id="nature-album" class="album-images">
         <img src="https://i.imgur.com/vMXotnB.jpeg" alt="Nature 1" />
         <img src="https://i.imgur.com/gd45B0h.jpeg" alt="Nature 2" />
         <img src="https://i.imgur.com/NlWXoUk.jpeg" alt="Nature 3" />
@@ -67,5 +95,18 @@
   <footer>
     <p>© 2025 Szymon Okapiec</p>
   </footer>
+
+  <script>
+    // Funkcja do rozwijania albumów po kliknięciu
+    function toggleAlbum(albumId) {
+      var album = document.getElementById(albumId);
+      if (album.style.display === "block") {
+        album.style.display = "none";
+      } else {
+        album.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
+
