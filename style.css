@@ -1,187 +1,134 @@
-/* Zmieniamy czcionkę na Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+/* Resetowanie domyślnych marginesów i paddingu */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Ustawienia ogólne */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0f0f0f;
-  color: #f5f5f5;
+  font-family: 'Poppins', sans-serif;
+  background-color: #515151;  /* Zmiana tła na ciemno szary */
+  color: #333;
   line-height: 1.6;
 }
 
+/* Nagłówek */
 header {
-  background-color: #1a1a1a;
-  padding: 2rem 1rem;
+  background-color: #111;
+  color: #fff;
+  padding: 20px 30px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 header h1 {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-nav a {
-  color: #f5f5f5;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #00bcd4;
-}
-
-.instagram-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  padding: 20px; /* Zwiększamy padding, aby ikona była większa */
-  border-radius: 50%;
-  transition: background-color 0.3s;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.instagram-button img {
-  width: 90px;  /* Zwiększamy rozmiar ikony 3 razy */
+.instagram-logo {
+  width: 70px;
   height: auto;
+  position: absolute;
+  top: 20px;
+  right: 30px;
   transition: transform 0.3s ease;
 }
 
-.instagram-button:hover {
-  background-color: #c13584; /* Kolor tła przy najechaniu */
+.instagram-logo:hover {
+  transform: scale(1.1);
 }
 
-.instagram-button:hover img {
-  transform: scale(1.1);  /* Powiększenie logo przy najechaniu */
-}
-
+/* Sekcje albumów */
 main {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: auto;
+  padding: 20px 30px;
 }
 
-section {
-  margin-bottom: 4rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
+/* Styl dla sekcji albumów */
+.album {
+  margin-bottom: 40px;
+}
+
+.album h2 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;  /* Tytuły albumów na biało */
 }
 
-.album-cover {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 300px;
-  margin: 15px;
-  text-align: center;
+/* Galeria zdjęć */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  justify-items: center;
 }
 
-.album-cover img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.album-cover:hover img {
-  transform: scale(1.05);
-}
-
-/* Wyśrodkowanie nazwy albumu na okładce */
-.album-cover .album-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Animacje dla zdjęć */
 .gallery img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: zoomFade 1s ease forwards;
-  animation-delay: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes zoomFade {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Ukrycie zdjęć w albumach, pokazywanie tylko okładek */
-.album-images {
-  display: none;
-  display: grid; /* Zmieniamy wyświetlanie zdjęć na siatkę */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Zmieniamy rozmiar zdjęć */
-  gap: 15px; /* Dystans między zdjęciami */
-}
-
-.album-cover img {
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.album-cover img:hover {
-  transform: scale(1.05);
-}
-
-.album-cover {
-  position: relative;
-}
-
-/* Usunięcie tekstu "Kliknij, aby zobaczyć więcej zdjęć" */
-.album-cover:after {
-  content: ""; /* Usunięcie tekstu */
-}
-
+/* Stopka */
 footer {
-  background-color: #1a1a1a;
+  background-color: #111;
+  color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  color: #aaa;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Dostosowanie dla urządzeń mobilnych */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Dwie kolumny na średnich ekranach */
+  }
+
+  .instagram-logo {
+    width: 50px; /* Zmniejszenie loga na urządzenia mobilne */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Mniejszy rozmiar tytułu albumu */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Dwie kolumny na małych ekranach */
+  }
+
+  .instagram-logo {
+    width: 40px; /* Zmniejszenie loga na bardzo małych ekranach */
+  }
+
+  header h1 {
+    font-size: 1.6rem; /* Mniejszy rozmiar tytułu */
+  }
+
+  h2 {
+    font-size: 1.3rem; /* Mniejszy rozmiar tytułu albumu */
+  }
 }
