@@ -1,72 +1,63 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moje Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Czcionka Roboto z Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Czcionka Poppins z Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <h1>Moje Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#sport">Sport</a></li>
-        <li><a href="#cars">Cars</a></li>
-        <li><a href="#nature">Nature</a></li>
-      </ul>
-    </nav>
-    <!-- Instagram button -->
-    <a href="https://www.instagram.com/okaphoto.like" class="instagram-button" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    <a href="https://www.instagram.com/okaphoto.like" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-logo">
     </a>
   </header>
 
   <main>
-    <!-- Sport -->
-    <section id="sport">
+    <section id="album1" class="album">
       <h2>Sport</h2>
-      <div class="album-cover">
-        <img src="https://i.imgur.com/9OAO9zR.jpeg" alt="Sport Cover" onclick="toggleAlbum('sport-album')" />
-        <div class="album-text">Sport</div>
-      </div>
-      <div id="sport-album" class="album-images">
-        <img src="https://i.imgur.com/9OAO9zR.jpeg" alt="Sport 1" />
-        <img src="https://i.imgur.com/GQ6ElPE.jpeg" alt="Sport 2" />
-        <img src="https://i.imgur.com/HlhHATm.jpeg" alt="Sport 3" />
-        <img src="https://i.imgur.com/iwmUjn4.jpeg" alt="Sport 4" />
+      <div class="gallery">
+        <img src="https://i.imgur.com/9OAO9zR.jpeg" alt="Zdjęcie 1">
+        <img src="https://i.imgur.com/GQ6ElPE.jpeg" alt="Zdjęcie 2">
+        <img src="https://i.imgur.com/HlhHATm.jpeg" alt="Zdjęcie 3">
+        <img src="https://i.imgur.com/iwmUjn4.jpeg" alt="Zdjęcie 4">
+        <img src="https://i.imgur.com/kw67PoZ.jpeg" alt="Zdjęcie 5">
+        <img src="https://i.imgur.com/ufMRtnG.jpeg" alt="Zdjęcie 6">
+        <img src="https://i.imgur.com/8vgGSr4.jpeg" alt="Zdjęcie 7">
+        <img src="https://i.imgur.com/zfzLZ5e.jpeg" alt="Zdjęcie 8">
+        <img src="https://i.imgur.com/p4hHRB3.jpeg" alt="Zdjęcie 9">
+        <img src="https://i.imgur.com/ljaG9fa.jpeg" alt="Zdjęcie 10">
+        <img src="https://i.imgur.com/SEQVXLc.jpeg" alt="Zdjęcie 11">
+        <img src="https://i.imgur.com/DrtJGuF.jpeg" alt="Zdjęcie 12">
+        <img src="https://i.imgur.com/8iTQE62.jpeg" alt="Zdjęcie 13">
       </div>
     </section>
 
-    <!-- Cars -->
-    <section id="cars">
+    <section id="album2" class="album">
       <h2>Cars</h2>
-      <div class="album-cover">
-        <img src="https://i.imgur.com/J4wfqMn.jpeg" alt="Cars Cover" onclick="toggleAlbum('cars-album')" />
-        <div class="album-text">Cars</div>
-      </div>
-      <div id="cars-album" class="album-images">
-        <img src="https://i.imgur.com/J4wfqMn.jpeg" alt="Cars 1" />
-        <img src="https://i.imgur.com/qBRekzC.jpeg" alt="Cars 2" />
-        <img src="https://i.imgur.com/whFZatK.jpeg" alt="Cars 3" />
-        <img src="https://i.imgur.com/NELnchp.jpeg" alt="Cars 4" />
+      <div class="gallery">
+        <img src="https://i.imgur.com/J4wfqMn.jpeg" alt="Zdjęcie 1">
+        <img src="https://i.imgur.com/qBRekzC.jpeg" alt="Zdjęcie 2">
+        <img src="https://i.imgur.com/whFZatK.jpeg" alt="Zdjęcie 3">
+        <img src="https://i.imgur.com/NELnchp.jpeg" alt="Zdjęcie 4">
+        <img src="https://i.imgur.com/G0THDV6.jpeg" alt="Zdjęcie 5">
+        <img src="https://i.imgur.com/XazRVBL.jpeg" alt="Zdjęcie 6">
+        <img src="https://i.imgur.com/xbDOF7w.jpeg" alt="Zdjęcie 7">
+        <img src="https://i.imgur.com/0ZyB0rA.jpeg" alt="Zdjęcie 8">
       </div>
     </section>
 
-    <!-- Nature -->
-    <section id="nature">
+    <section id="album3" class="album">
       <h2>Nature</h2>
-      <div class="album-cover">
-        <img src="https://i.imgur.com/vMXotnB.jpeg" alt="Nature Cover" onclick="toggleAlbum('nature-album')" />
-        <div class="album-text">Nature</div>
-      </div>
-      <div id="nature-album" class="album-images">
-        <img src="https://i.imgur.com/vMXotnB.jpeg" alt="Nature 1" />
-        <img src="https://i.imgur.com/gd45B0h.jpeg" alt="Nature 2" />
-        <img src="https://i.imgur.com/NlWXoUk.jpeg" alt="Nature 3" />
-        <img src="https://i.imgur.com/ITY6U7h.jpeg" alt="Nature 4" />
+      <div class="gallery">
+        <img src="https://i.imgur.com/vMXotnB.jpeg" alt="Zdjęcie 1">
+        <img src="https://i.imgur.com/gd45B0h.jpeg" alt="Zdjęcie 2">
+        <img src="https://i.imgur.com/NlWXoUk.jpeg" alt="Zdjęcie 3">
+        <img src="https://i.imgur.com/ITY6U7h.jpeg" alt="Zdjęcie 4">
       </div>
     </section>
   </main>
@@ -75,16 +66,5 @@
     <p>© 2025 Szymon Okapiec</p>
   </footer>
 
-  <script>
-    // Funkcja do rozwijania albumów po kliknięciu
-    function toggleAlbum(albumId) {
-      var album = document.getElementById(albumId);
-      if (album.style.display === "block") {
-        album.style.display = "none";
-      } else {
-        album.style.display = "block";
-      }
-    }
-  </script>
 </body>
 </html>
