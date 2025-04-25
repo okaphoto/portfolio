@@ -53,17 +53,27 @@ nav a:hover {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #e4405f;
-  color: white;
+  background-color: transparent;
   padding: 10px;
   border-radius: 50%;
-  font-size: 1.5rem;
-  text-decoration: none;
   transition: background-color 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-button img {
+  width: 30px;  /* Dostosuj rozmiar logo */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 .instagram-button:hover {
-  background-color: #c13584;
+  background-color: #c13584; /* Kolor tła przy najechaniu */
+}
+
+.instagram-button:hover img {
+  transform: scale(1.1);  /* Powiększenie logo przy najechaniu */
 }
 
 main {
@@ -175,24 +185,6 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
   border-radius: 5px;
-}
-
-/* Styl dla przycisku Instagram */
-.instagram-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #e4405f;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.instagram-button:hover {
-  background-color: #c13584;
 }
 
 footer {
