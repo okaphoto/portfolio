@@ -155,6 +155,9 @@ h2 {
 /* Ukrycie zdjęć w albumach, pokazywanie tylko okładek */
 .album-images {
   display: none;
+  display: grid; /* Zmieniamy wyświetlanie zdjęć na siatkę */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Zmieniamy rozmiar zdjęć */
+  gap: 15px; /* Dystans między zdjęciami */
 }
 
 .album-cover img {
@@ -173,19 +176,9 @@ h2 {
   position: relative;
 }
 
+/* Usunięcie tekstu "Kliknij, aby zobaczyć więcej zdjęć" */
 .album-cover:after {
-  content: "Kliknij, aby zobaczyć więcej zdjęć";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem;
-  border-radius: 5px;
+  content: ""; /* Usunięcie tekstu */
 }
 
 footer {
