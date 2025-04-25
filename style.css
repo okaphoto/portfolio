@@ -114,7 +114,8 @@ h2 {
   transform: scale(1.05);
 }
 
-.album-text {
+/* Wyśrodkowanie nazwy albumu na okładce */
+.album-cover .album-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,3 +198,4 @@ section {
   align-items: center;
   text-align: center;
 }
+
